@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_primary">#FF7C4DFF</color>
+    <color name="purple_primary_dark">#FF651FFF</color>
+    <color name="amber_accent">#FFFFAB40</color>
+    <color name="amber_accent_light">#FFFFD180</color>
+    <color name="background_dark">#FF121212</color>
+    <color name="surface_dark">#FF1E1E2E</color>
+    <color name="surface_card">#FF2A2A3C</color>
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#B3FFFFFF</color>
+    <color name="error_red">#FFCF6679</color>
+    <color name="winner_green">#FF00E676</color>
+    <color name="gradient_start">#FF7C4DFF</color>
+    <color name="gradient_end">#FFFF6D00</color>
+</resources>

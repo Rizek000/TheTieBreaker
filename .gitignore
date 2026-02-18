@@ -1,0 +1,47 @@
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# Gradle
+.gradle/
+build/
+local.properties
+gradle/wrapper/gradle-wrapper.jar
+
+# Android
+app/release/
+app/debug/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Kotlin
+*.class
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Generated files
+captures/
+.externalNativeBuild/
+.cxx/
+output.json
+
+# Signing
+*.jks
+*.keystore
+signing.properties
