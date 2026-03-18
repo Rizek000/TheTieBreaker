@@ -1,6 +1,7 @@
 package com.rizek.tiebreaker.ui
 
 import android.animation.ValueAnimator
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AnimationUtils
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.rizek.tiebreaker.R
 import com.rizek.tiebreaker.databinding.ActivityMainBinding
 import com.rizek.tiebreaker.model.DecisionResult
+import com.rizek.tiebreaker.util.AuthManager
 import com.rizek.tiebreaker.util.HistoryManager
 import com.rizek.tiebreaker.util.RouletteEngine
 
@@ -20,17 +22,38 @@ class MainActivity : AppCompatActivity() {
     private lateinit var optionsAdapter: OptionsAdapter
     private lateinit var historyAdapter: HistoryAdapter
     private lateinit var historyManager: HistoryManager
+    private lateinit var authManager: AuthManager
     private lateinit var rouletteEngine: RouletteEngine
 
     private var historyExpanded = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        authManager = AuthManager(this)
+
+        if (!authManager.isUserLoggedIn()) {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+            return
+        }
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         historyManager = HistoryManager(this)
         rouletteEngine = RouletteEngine(this)
+
+        // Show welcome message with username
+        val username = authManager.getCurrentUser() ?: ""
+        binding.subtitleText.text = getString(R.string.welcome_user, username)
+
+        // Logout button
+        binding.btnLogout.setOnClickListener {
+            authManager.logout()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
 
         setupOptionsRecycler()
         setupHistoryRecycler()

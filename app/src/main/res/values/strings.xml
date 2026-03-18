@@ -11,4 +11,24 @@
     <string name="history_title">History</string>
     <string name="history_empty">No decisions yet</string>
     <string name="options_summary">from %d options</string>
+
+    <!-- Login / Sign Up -->
+    <string name="login_title">Log In</string>
+    <string name="signup_title">Sign Up</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="btn_login">LOG IN</string>
+    <string name="btn_signup">SIGN UP</string>
+    <string name="toggle_to_signup">Don\'t have an account? Sign Up</string>
+    <string name="toggle_to_login">Already have an account? Log In</string>
+    <string name="error_empty_username">Username is required</string>
+    <string name="error_short_username">Username must be at least 3 characters</string>
+    <string name="error_empty_password">Password is required</string>
+    <string name="error_short_password">Password must be at least 6 characters</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_user_exists">Username already taken</string>
+    <string name="error_invalid_credentials">Invalid username or password</string>
+    <string name="btn_logout">Logout</string>
+    <string name="welcome_user">Welcome, %s!</string>
 </resources>
